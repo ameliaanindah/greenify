@@ -1,0 +1,43 @@
+Spacer(),
+Padding(
+  padding: EdgeInsets.only(top: 28.v),
+  child: CustomIconButton(
+    height: 40.adaptSize,
+    width: 40.adaptSize,
+    padding: EdgeInsets.all(8.h),
+    child: CustomImageView(
+      imagePath: ImageConstant.imgMegaphone,
+    ),
+  ),
+),
+Padding(
+  padding: EdgeInsets.only(
+    left: 18.h,
+    top: 40.v,
+    bottom: 10.v,
+  ),
+  child: Text(
+    "1",
+    style: CustomTextStyles.titleSmallEncodeSansGray90001,
+  ),
+),
+Padding(
+  padding: EdgeInsets.only(
+    left: 19.h,
+    top: 28.v,
+  ),
+  child: CustomIconButton(
+    height: 40.adaptSize,
+    width: 40.adaptSize,
+    padding: EdgeInsets.all(8.h),
+    child: CustomImageView(
+      imagePath: ImageConstant.imgPlus,
+    ),
+  ),
+)
+],
+),
+);
+}
+
+buat shared preferences dong, ketika di klik tambah (plus) maka tulisan angka "1" nya akan bertambah juga, sebaliknya misalkan di klik minus maka akan berkurang, nah buat shared preferences untuk menyimpan id_product dan total_harga nya, nah di total harga juga demikian, ambil "harga" nya kemudian di kalikan quantity, misalkan klik plus, barang kan jadi 2, harga nya jadi dua kali lipat. intinya seperti algoritma kita memesan sesuatu,

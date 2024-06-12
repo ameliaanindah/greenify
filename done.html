@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Greenify Market</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Tautan ke favicon -->
+		<link rel="icon" type="image/png" href="images/favicon.png">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
@@ -112,70 +115,119 @@
 			<section class="ftco-section ftco-cart">
 				<div class="container">
 					<div class="row">
-					<div class="col-md-12 ftco-animate">
-						<div class="cart-list">
-							<table class="table">
-								<thead class="thead-primary">
-								  <tr class="text-center">
-									<th>&nbsp;</th>
-									<th>Nama Produk</th>
-                                    <th>Tgl Pesan</th>
-									<th>Harga</th>
-									<th>Jumlah</th>
-									<th>Total</th>
-                                    <th>No. Resi</th>
-                                    <th>Tgl Terkirim</th>
-								  </tr>
-								</thead>
-								<tbody>
-									<tr class="text-center cart-item">
-										<td class="image-prod"><div class="img" style="background-image:url(images/product-1.jpg);"></div></td>
-										<td class="product-name">
-											<h3>Jagung</h3>
-										</td>
-                                        <td class="date">13/05/2024 10:04</td>
-										<td class="price">Rp 8.500</td>
-										<td class="quantity">2</td>
-										<td class="jumlah">Rp 19.000</td>
-                                        <td class="date">13/05/2024 13:10</td>
-									</tr><!-- END TR-->
-
-									<tr class="text-center cart-item">
-										<td class="image-prod"><div class="img" style="background-image:url(images/product-7.jpg);"></div></td>
-										<td class="product-name">
-											<h3>Susu</h3>
-										</td>
-                                        <td class="date">13/05/2024 08:09</td>
-										<td class="price">Rp 10.000</td>
-										<td class="quantity">1</td>
-										<td class="jumlah">Rp 10.000</td>
-                                        <td class="date">13/05/2024 09:54</td>
-									</tr><!-- END TR-->
-
-									<tr class="text-center cart-item">
-										<td class="image-prod"><div class="img" style="background-image:url(images/product-3.jpg);"></div></td>
-										<td class="product-name">
-											<h3>Buah Jeruk</h3>
-										</td>
-                                        <td class="date">15/05/2024 14:10</td>
-										<td class="price">Rp 16.000/kg</td>
-										<td class="quantity">1</td>
-										<td class="jumlah">Rp 16.000/kg</td>
-                                        <td class="date">15/05/2024 15:55</td>
-									</tr><!-- END TR-->
-								
-								
-									<!-- END TR-->
-								</tbody>
-								
-								
-							  </table>
-						  </div>
+						<div class="col-md-12 ftco-animate">
+							<div class="cart-list">
+								<div class="cart-item">
+									<div class="image-prod" style="background-image:url(images/product-1.jpg);"></div>
+									<div class="product-details">
+										<h3 class="product-name">Jagung</h3>
+										<p class="date">Tgl Pesan: 13/05/2024 10:04</p>
+										<p class="price">Harga: Rp 8.500</p>
+										<p class="quantity">Jumlah: 2</p>
+										<p class="total">Total: Rp 19.000</p>
+										<p class="resi">No. Resi: 123456789</p>
+										<p class="date">Tgl Terkirim: 13/05/2024 13:10</p>
+									</div>
+								</div>
+			
+								<div class="cart-item">
+									<div class="image-prod" style="background-image:url(images/product-7.jpg);"></div>
+									<div class="product-details">
+										<h3 class="product-name">Susu</h3>
+										<p class="date">Tgl Pesan: 13/05/2024 08:09</p>
+										<p class="price">Harga: Rp 10.000</p>
+										<p class="quantity">Jumlah: 1</p>
+										<p class="total">Total: Rp 10.000</p>
+										<p class="resi">No. Resi: 987654321</p>
+										<p class="date">Tgl Terkirim: 13/05/2024 09:54</p>
+									</div>
+								</div>
+			
+								<div class="cart-item">
+									<div class="image-prod" style="background-image:url(images/product-3.jpg);"></div>
+									<div class="product-details">
+										<h3 class="product-name">Buah Jeruk</h3>
+										<p class="date">Tgl Pesan: 15/05/2024 14:10</p>
+										<p class="price">Harga: Rp 16.000/kg</p>
+										<p class="quantity">Jumlah: 1</p>
+										<p class="total">Total: Rp 16.000/kg</p>
+										<p class="resi">No. Resi: 123123123</p>
+										<p class="date">Tgl Terkirim: 15/05/2024 15:55</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-    		
-    	</div>
-    </section>
+			</section>
+			
+			<style>
+				.cart-list {
+					display: flex;
+					flex-direction: column;
+					gap: 20px;
+				}
+			
+				.cart-item {
+					display: flex;
+					flex-direction: column;
+					border: 1px solid #ddd;
+					padding: 15px;
+					border-radius: 10px;
+					background-color: #fff;
+					box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+				}
+			
+				.image-prod {
+					width: 100%;
+					height: 150px;
+					background-size: cover;
+					background-position: center;
+					border-radius: 10px;
+				}
+			
+				.product-details {
+					margin-top: 10px;
+				}
+			
+				.product-details h3 {
+					margin: 0 0 10px;
+					font-size: 1.25rem;
+					color: #333;
+				}
+			
+				.product-details p {
+					margin: 0 0 5px;
+					font-size: 1rem;
+					color: #666;
+				}
+			
+				.cart-item:nth-child(2n) .image-prod {
+					background-color: #F1C736;
+				}
+			
+				.cart-item:nth-child(2n + 1) .image-prod {
+					background-color: #3d9ac6;
+				}
+			
+				@media (min-width: 768px) {
+					.cart-list {
+						flex-direction: row;
+						flex-wrap: wrap;
+					}
+			
+					.cart-item {
+						width: 48%;
+					}
+				}
+			
+				@media (min-width: 1024px) {
+					.cart-item {
+						width: 31%;
+					}
+				}
+			</style>
+			
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
 		<div class="container py-4">
@@ -243,6 +295,9 @@
 		   
 		  </div>
 		</div>
+
+
+		
 	  </footer>
 	  
 	

@@ -10241,30 +10241,169 @@ textarea.form-control {
   z-index: 1; /* Overlay harus berada di belakang konten teks dan tombol */
 }
 
-.status {
-  width: 100px; /* Atur lebar kotak warna */
-  height: 5px; /* Atur tinggi kotak warna */
-  border-radius: 15px; /* setengah dari tinggi */
-  line-height: 1; /* Mengatur line-height agar sesuai dengan teks */
-  text-align: center;
-  color: #fff;
+
+/* CSS untuk elemen dengan teks yang lebih kecil */
+/* CSS untuk elemen dengan teks yang lebih kecil */
+.keranjang-small-text {
+  font-size: 0.9em !important; /* Ukuran font yang lebih kecil */
+}
+
+.ftco-section {
+  padding: 4em 0;
+}
+
+.keranjang-cart-list {
+  width: 100%;
+}
+
+.keranjang-cart-item {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keranjang-cart-item .product-remove {
+  margin-right: 1em;
+}
+
+.keranjang-cart-item .image-prod .img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1em;
+}
+
+.keranjang-cart-item .product-details {
+  flex-grow: 1;
+}
+
+.keranjang-cart-item .price,
+.keranjang-cart-item .total {
+  font-size: 1em; /* Ukuran font yang lebih kecil */
   font-weight: bold;
-  font-size: 0.8em; /* menyesuaikan ukuran teks */
-  display: inline-flex;
+}
+
+.keranjang-cart-item .quantity {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-  padding: 5px;
 }
 
-.menunggu {
-  background-color: #F1C736;
+.keranjang-cart-item h3 {
+  font-size: 1.2em; /* Ukuran font untuk judul produk */
 }
 
-.sedang-dikirim {
-  background-color: #387087;
+.keranjang-cart-item p {
+  font-size: 0.9em; /* Ukuran font untuk deskripsi produk */
 }
 
-.selesai {
-  background-color: #7D7C31;
+.btn {
+  font-size: 0.9em; /* Ukuran font untuk tombol */
+}
+
+@media (max-width: 768px) {
+  .keranjang-cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .keranjang-cart-item .d-flex {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .keranjang-cart-item .product-details {
+    width: 100%;
+  }
+
+  .keranjang-cart-item .price,
+  .keranjang-cart-item .total {
+    margin-top: 1em;
+  }
+
+  .keranjang-cart-item .quantity {
+    margin-top: 1em;
+  }
+}
+
+.keranjang-cart-total {
+  border: 1px solid #e1e1e1;
+  padding: 1em;
+}
+
+.keranjang-cart-wrap {
+  margin-top: 2em;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.keranjang-total-price {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.quantity .btn {
+  font-size: 0.8em; /* Sesuaikan ukuran font tombol sesuai kebutuhan Anda */
+  padding: 0.2em 0.4em; /* Sesuaikan padding tombol sesuai kebutuhan Anda */
+}
+
+.keranjang-cart-item .price {
+  margin-bottom: 1em; /* Add margin below the price */
+}
+
+.keranjang-cart-item .quantity {
+  margin-top: 1em; /* Add margin above the quantity section */
+}
+.cart-item {
+  border: 1px solid #ddd;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.image-prod {
+  flex-shrink: 0;
+}
+
+.product-details {
+  flex: 1;
+  margin-bottom: 1em; /* Add spacing below the product details */
+}
+
+.price {
+  flex: 1;
+  margin-top: 1em; /* Add spacing above the price */
+  margin-bottom: 1em; /* Ensure there's space below the price as well */
+}
+
+.quantity {
+  flex: 1;
+  margin-top: 1em; /* Add spacing above the quantity */
+}
+
+.total {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .product-remove, .image-prod, .product-details, .price, .quantity, .total {
+      text-align: left;
+      margin-bottom: 1em;
+  }
+
+  .product-remove {
+      align-self: flex-end;
+  }
+
+  .quantity {
+      justify-content: flex-start;
+  }
 }

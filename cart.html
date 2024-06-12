@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Greenify Market</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <!-- Tautan ke favicon -->
+		<link rel="icon" type="image/png" href="images/favicon.png">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
@@ -96,93 +99,42 @@
 	  </div>
 	</div>
 
-	<section class="ftco-section ftco-cart">
-			<div class="container">
-				<div class="row">
+
+	<section class="ftco-section ftco-cart keranjang-small-text">
+		<div class="container">
+			<div class="row">
 				<div class="col-md-12 ftco-animate">
-					<div class="cart-list">
-						<table class="table">
-							<thead class="thead-primary">
-							  <tr class="text-center">
-								<th>&nbsp;</th>
-								<th>&nbsp;</th>
-								<th>Nama Produk</th>
-								<th>Harga</th>
-								<th>Jumlah</th>
-								<th>Total</th>
-							  </tr>
-							</thead>
-							<tbody>
-								<tr class="text-center cart-item">
-									<td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-									<td class="image-prod"><div class="img" style="background-image:url(images/product-1.jpg);"></div></td>
-									<td class="product-name">
-										<h3>Jagung</h3>
-										<p>Jagung kami hadir dengan aroma segar dan cita rasa autentik</p>
-									</td>
-									<td class="price">Rp 8.500</td>
-									<td class="quantity">
-										<div class="input-group mb-3">
-											<button class="btn btn-outline-primary btn-lg" type="button" onclick="decreaseQuantity(this)">  -  </button>
-											<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-											<button class="btn btn-outline-primary btn-lg" type="button" onclick="increaseQuantity(this)">  +  </button>
-										</div>
-									</td>
-									<td class="jumlah">Rp 8.500</td>
-								</tr><!-- END TR-->
-							
-								<!-- END TR-->
-							</tbody>
-							
-							
-						  </table>
-					  </div>
-				</div>
-			</div>
-			<div class="row justify-content-end">
-				<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-					<div class="cart-total mb-3">
-						<h3>Kode Kupon</h3>
-						<p>Masukkan kode dibawah ini</p>
-						  <form action="#" class="info">
-				  <div class="form-group">
-					  <label for="">Kode kupon</label>
-					<input type="text" class="form-control text-left px-3" placeholder="">
-				  </div>
-				</form>
+					<div class="keranjang-cart-list">
+						<!-- Cart items will be inserted here by JavaScript -->
 					</div>
-					<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Pakai Kupon</a></p>
+					<div class="keranjang-cart-total mb-3">
+						<h3>Total Pembayaran</h3>
+						<p class="d-flex">
+							<span>Subtotal</span>
+							<span id="keranjang-subtotal">Rp 0</span>
+						</p>
+						<p class="d-flex">
+							<span>Ongkir</span>
+							<span>Rp 5.000</span>
+						</p>
+						<p class="d-flex">
+							<span>Diskon</span>
+							<span>- Rp 10.000</span>
+						</p>
+						<hr>
+						<p class="d-flex keranjang-total-price">
+							<span>Total</span>
+							<span id="keranjang-total">Rp 0</span>
+						</p>
+						<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Pesan Sekarang</a></p>
+					</div>
 				</div>
-				
-			<!-- HTML -->
-<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
-	<div class="cart-total mb-3">
-		<h3>Total Pembayaran</h3>
-		<p class="d-flex">
-			<span>Subtotal</span>
-			<span id="subtotal">Rp 0</span>
-		</p>
-		<p class="d-flex">
-			<span>Ongkir</span>
-			<span>Rp 5.000</span>
-		</p>
-		<p class="d-flex">
-			<span>Diskon</span>
-			<span>- Rp 10.000</span>
-		</p>
-		<hr>
-		<p class="d-flex total-price">
-			<span>Total</span>
-			<span id="total">Rp 0</span>
-		</p>
-	</div>
-	<p><a href="checkout.html" class="btn btn-primary py-3 px-4">Pesan Sekarang</a></p>
-</div>
-
 			</div>
-			</div>
-		</section>
-
+		</div>
+	</section>
+	
+	
+	
 		<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
 			<div class="container py-4">
 			  <div class="row d-flex justify-content-center py-5">
@@ -274,84 +226,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  <script>
-	function increaseQuantity(button) {
-		var input = button.parentElement.querySelector("input[type='text']");
-		var quantity = parseInt(input.value);
-		input.value = quantity + 1;
-
-		// Mengupdate total harga
-		updateTotalPrice(input);
-	}
-
-	function decreaseQuantity(button) {
-		var input = button.parentElement.querySelector("input[type='text']");
-		var quantity = parseInt(input.value);
-		if (quantity > 1) {
-			input.value = quantity - 1;
-
-			// Mengupdate total harga
-			updateTotalPrice(input);
-		}
-	}
-
-	function updateTotalPrice(input) {
-		var priceCell = input.parentElement.parentElement.previousElementSibling;
-		var price = parseFloat(priceCell.textContent.replace("Rp ", "").replace(".", "").replace(",", "."));
-		var quantity = parseInt(input.value);
-		var totalCell = input.parentElement.parentElement.nextElementSibling;
-		var total = price * quantity;
-		totalCell.textContent = "Rp " + formatNumber(total);
-
-		// Memperbarui total jumlah ketika kuantitas diubah
-		updateCartTotals();
-	}
-
-	function updateCartTotals() {
-		var cartRows = document.querySelectorAll(".cart-item");
-		var subtotal = 0;
-
-		cartRows.forEach(function(row) {
-			var priceCell = row.querySelector(".price");
-			var price = parseFloat(priceCell.textContent.replace("Rp ", "").replace(".", "").replace(",", "."));
-			var quantityElement = row.querySelector(".quantity input");
-			var quantity = parseInt(quantityElement.value);
-			subtotal += price * quantity;
-		});
-
-		var discount = 10000; // Jumlah diskon
-		var delivery = 5000; // Biaya pengiriman
-		var total = subtotal - discount + delivery; // Menghitung total berdasarkan subtotal, diskon, dan biaya pengiriman
-
-		// Memperbarui subtotal dan total di keranjang
-		document.querySelector("#subtotal").textContent = "Rp " + formatNumber(subtotal);
-		document.querySelector("#total").textContent = "Rp " + formatNumber(total);
-	}
-
-	// Function to format number to currency format (e.g., Rp 10.000)
-	function formatNumber(number) {
-		return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-	}
-</script>
-<script>
-	// Fungsi untuk menampilkan keranjang di halaman cart.html
-function displayCart() {
-	var cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-	// Tampilkan setiap produk di keranjang
-	cart.forEach(product => {
-		// Tampilkan detail produk di tabel atau daftar
-	});
-}
-
-// Panggil fungsi untuk menampilkan keranjang saat halaman dimuat
-window.onload = function() {
-	displayCart();
-};
-
-</script>
-
+  <script src="js/populateCart.js"></script>
+  <script src="js/keranjangScript.js"></script>
 
   </body>
 </html>
-
